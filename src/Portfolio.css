@@ -1,0 +1,154 @@
+.portfolio_general{
+ min-height: 920px;
+ flex-direction: column;
+}
+.portfolio{
+ height: auto;
+ flex-direction: column;
+}
+/* TITLE */
+.pre-title{
+ font-size: calc(20px + 0.3vw);
+ color: #b9b9b9 ;
+ text-align: center;
+ font-variant: var(--main-font);
+ padding-top: 2rem;
+ animation-name: potfolio;
+ animation-duration: 2.5s;
+ position: relative;
+}
+@keyframes potfolio {
+  0%{
+   margin-top: 300px;
+  }
+}
+.title{ 
+ padding-bottom: 3rem;
+ text-align: center;
+ font-family: var(--main-font);
+ font-size: 30px;
+ color: white;
+}
+/* FRAMES */
+.portfolio_container{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ align-items: center;
+ gap: 2rem;
+ padding: 0 1em;
+ margin-bottom: 5rem;
+}
+.porfolio_frame{ 
+ height: 200px;
+ min-width: 250px;
+ max-width: 450px;
+ border-radius: 3px;
+ box-shadow: 1px 1px 5px rgb(104, 98, 98);
+}
+.portfolio_project-name{
+ color: white;
+ font-size: 20px;
+ font-family: var(--main-font);
+ margin: 15px 0;
+ margin-left: 10px;
+}
+.proyect_description{ 
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ font-family: var(--main-font);
+ font-size: 15px;
+ gap: 1rem;
+ color: black;
+ height: 100%;
+ width: 100%;
+ padding: 2rem;
+ color: white;
+ background-color: rgba(0, 0, 0, .7);
+ opacity: 0;
+ transition: opacity 400ms ease-in-out;
+}
+.proyect_description:hover{
+ transition: opacity 400ms ease-in-out;
+ opacity: 1;
+ box-shadow: 1px 1px 5px rgb(102, 94, 94);
+}
+.proyect_link{
+ text-decoration: none;
+ color: rgb(235, 224, 224);
+ font-size: 18px;
+ position: relative;
+} 
+.proyect_link::before {
+ content: "";
+ position: absolute;
+ left: 0%;
+ bottom: 0%;
+ width: 0;
+ height: 2px;
+ border-radius: 50%;
+ background-color: #E0B6A8;
+ transition: width 0.50s ease-out;
+}
+.proyect_link:hover::before {
+  width: 100%;
+}
+.proyect-4{
+ background: url('./assets/ecommerce.png'); 
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: top; 
+ animation-name: portfolio;
+ animation-duration: 3s;
+ position: relative;
+}
+.proyect-3{
+ background: url('./assets/pokemon.png'); 
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: top; 
+ animation-name: portfolio;
+ animation-duration: 3s;
+ position: relative;
+}
+.proyect-2{
+ background: url('./assets/RickandMorty.png'); 
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: top; 
+ animation-name: portfolio;
+ animation-duration: 3s;
+ position: relative;
+}
+.proyect-1{
+ background: url('./assets/wheater.png');
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
+ animation-name: portfolio;
+ animation-duration: 3s;
+ position: relative; 
+}
+@keyframes portfolio {
+  0%{
+   background-size: 160%;
+  }
+  100%{ 
+    background-size: 120%;
+  }
+ /* 98%{
+    background-size: cover;
+  }*/
+}
+/*RESPONSIVE SECTION*/
+@media(min-width: 600px){
+ .pre-title{
+  margin-top: 2rem;
+ }
+ .title{
+   font-size: 60px;
+ }
+}
