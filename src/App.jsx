@@ -2,27 +2,36 @@ import './Home_About.css'
 import './Skills_Contact.css'
 import Header from './Components/Header'
 import Home from './Components/Home'
-import { useEffect, useRef, useState } from 'react'
+import {useState } from 'react'
 import Portfolio from './Components/Portfolio'
 import { Skills } from './Components/Skills'
 import Contact from './Components/Contact'
 import AboutMe from './Components/AboutMe'
-import locoScroll from './locomotiveScroll/locoScroll'
-
+//Lenguage 
+import Lenguage from './english/lenguage'
 
 function App() {
 
- //LOCOMOTIVE SCROLL 
- locoScroll()
- 
-
- //Animation menu navbar btn
+//Animation menu navbar btn
  const [menuOpen, setMenuOpen] = useState(false)
  const menuBTN = document.getElementsByClassName('menu_btn')
  const showMenu = document.getElementsByClassName('nav__ul')
 
- 
- //close and open animation navbar btn 
+//Lenguage state 
+ const [translation, setTranslation] = useState(Lenguage.en)
+ const [lenguageText, setLenguageText] = useState('Spa')
+
+ const handleLenguage = () => {
+   if(translation == Lenguage.en ){
+    setTranslation(Lenguage.es)
+    setLenguageText('Eng')
+   }else{
+     setTranslation(Lenguage.en)
+     setLenguageText('Spa')
+   }
+ }
+
+//close and open animation navbar btn 
  const handleMenu = () => {
 
     if(!menuOpen){
@@ -49,62 +58,6 @@ const downloadPDF = () => {
   })
 }
 
-  /* ANIMATIONS */
-/*
- // HI IM
- const [titleAnimation, setTitleAnimation] = useState("block")
- // ABOUT ME text 
- const [aboutAnimation, setAboutAnimation] = useState("block")
- // ABOUT ME SECTION
- const [aboutMeSection, setAboutMeSection] = useState('none')
- // Portoflio
- const [portfolioSection, setPortfolioSection] =  useState("block")
- // Skills
- const [skillSection, setSkillSection] = useState('none')
- // Contact
- const [contactSection, setContactSection] = useState('none')
-
- const divRef = useRef()
-
-useEffect(()=> {
- const handleScroll = () => {
-   const div = divRef.current
-   const {y} = div.getBoundingClientRect()
-
-  console.log(y) 
-
-  //'HI IM'
-   const animation = y > -350 ? 'block' : 'none'
-   setTitleAnimation(animation)
-
-  //ABOUT ME text 
-   const animationAbout = y > -600 ? 'block' : 'none'
-   setAboutAnimation(animationAbout)
-
-  //ABOUT ME SECTION
-   const aboutMe = y > -20 ? "none" : 'flex'
-   setAboutMeSection(aboutMe) 
-  
-  //PORTFOLIO 
-   const portfolio = y > -520 ? 'none' : 'flex'
-   setPortfolioSection(portfolio)  
-
-  //Skills
-   const skills = y > -1480 ? 'none' : 'flex'
-   setSkillSection(skills)
-  //Contact 
-   const contact = y > -2244 ? 'none' : 'flex'
-   setContactSection(contact)
- }
-
-  window.addEventListener('scroll', handleScroll)
-
- return () => {
-  window.removeEventListener('scroll', handleScroll)
- }
- 
-}, [])*/
-
   return (
     <div className="App">
       <header className='header__app'>
@@ -112,6 +65,7 @@ useEffect(()=> {
          <a className='App_icon_name' href='' >Alejandro R.</a>
          <a href="https://www.linkedin.com/in/alejandro0/" target="_blank"><i className="fa-brands fa-linkedin"></i></a>
          <a href="https://github.com/AleAlejandro0" target="_blank"><i className="fa-brands fa-github"></i></a>
+         <button  className='App_lenguage_btn' onClick={handleLenguage}>{lenguageText}</button>
          <button className='App_icon_cv' onClick={downloadPDF}>CV</button>
 
          <div className='menu_btn' onClick={handleMenu}>
@@ -119,33 +73,34 @@ useEffect(()=> {
          </div>
         </div>
         <Header
+          translation={translation}
           handleMenu={handleMenu}
         />
       </header>
       <main id='main_container' data-scroll-container >
         <section id='nav-home' className='App_home'>
           <Home
-        
+            translation={translation}
           />
         </section>
         <section id='about_me'>
           <AboutMe
-          
+           translation={translation}
           />
         </section>
         <section id='portfolio' className='portofolio_section'>
           <Portfolio
-      
+            translation={translation}
           />
         </section>
         <section id='skill_set' className='skills_section'>
           <Skills
-    
+           translation={translation}
           />
         </section>
         <section id='getin_touch'  className='contact_section'>
           <Contact
-          
+           translation={translation}
           />
         </section>
       </main>

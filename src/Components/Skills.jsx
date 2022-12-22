@@ -1,12 +1,11 @@
 import React from 'react'
 
-export const Skills = ({skillSection}) => {
+export const Skills = ({translation, skillSection}) => {
 
- 
  return (
    <div className='skills' style={{ display: skillSection }} data-scroll-section>
-     <p className='pre-title'>Mejor experiencia de usuario</p>
-     <h2 className='title'>Habilidades</h2>
+     <p className='pre-title'>{translation.preTitle3}</p>
+     <h2 className='title'>{translation.title4}</h2>
 
      <ul className='skills_container'>
        <li className='skills_item'><i className="icon_skill fa-brands fa-react"></i> React</li>
@@ -20,7 +19,7 @@ export const Skills = ({skillSection}) => {
        <li className='skills_item'><i className="icon_skill fa-solid fa-terminal"></i>Well commented code</li>
      </ul>
 
-     <p className='skills_after'>...y mucho mas</p>
+     <p className='skills_after'>{translation.endText}</p>
    </div>
  )
 }

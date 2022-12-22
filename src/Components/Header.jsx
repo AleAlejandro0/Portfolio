@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-const Header = ({handleMenu}) => {
+const Header = ({translation, handleMenu}) => {
 
   const [isHover, setIsHover] = useState(false)
   let opacityNumber
@@ -20,7 +20,7 @@ const Header = ({handleMenu}) => {
           >
             <a className='nav__link' 
              style={{opacity: opacityNumber}} href="#nav-home" 
-             onClick={handleMenu}>Inicio
+             onClick={handleMenu}>{translation.nav1}
             </a>
           </li>
 
@@ -30,7 +30,7 @@ const Header = ({handleMenu}) => {
           >
             <a className='nav__link' 
              style={{opacity: opacityNumber}} href="#about_me" 
-             onClick={handleMenu}>Sobre me
+             onClick={handleMenu}>{translation.nav2}
             </a>
           </li>
 
@@ -40,7 +40,7 @@ const Header = ({handleMenu}) => {
           >
             <a className='nav__link' 
              style={{opacity: opacityNumber}} href="#portfolio" 
-             onClick={handleMenu}>Portafolio
+             onClick={handleMenu}>{translation.nav3}
             </a>
           </li>
 
@@ -50,7 +50,7 @@ const Header = ({handleMenu}) => {
           >
             <a className='nav__link' 
              style={{opacity: opacityNumber}} href="#skill_set" 
-             onClick={handleMenu}>Habilidades
+             onClick={handleMenu}>{translation.nav4}
             </a>
           </li>
 
@@ -60,7 +60,7 @@ const Header = ({handleMenu}) => {
           >
             <a className='nav__link' 
              style={{opacity: opacityNumber}} href="#getin_touch" 
-             onClick={handleMenu}>Contacto
+             onClick={handleMenu}>{translation.nav5}
             </a>
           </li>
         </ul>
