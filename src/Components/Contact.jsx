@@ -30,7 +30,7 @@ const Contact = ({translation, contactSection}) => {
            </div>
            <button className='form_btn'>{translation.formBTN}</button>
 
-           <input type="hidden" name="_next" value="https://www.youtube.com/watch?v=LeiFF0gvqcc&ab_channel=michaeljacksonVEVO"/>
+           <input type="hidden" name="_next" value="https://delicate-parfait-3764f8.netlify.app/"/>
            <input type="hidden" name="_captcha" value="false" />
         </form>
       </div>
