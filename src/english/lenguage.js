@@ -20,7 +20,7 @@ const lenguage = {
     //SECOND SECTION 
       preTitle: 'What do I have to offer?',
       title2: 'About me',
-      text: 'I have experience designing web apps using React, JS, HTML, and CSS with multiple projects. Great problem isolation, troubleshooting, communication, and teamwork to reach common goals. Now looking to implement and improve my skills in a professional manner to get my code to the next level.',
+      text: 'I have experience designing web apps using ReactJS, JS, HTML, and CSS, Node and Express with multiple projects. Great problem isolation, troubleshooting, communication, and teamwork to reach common goals. Now looking to implement and improve my skills in a professional manner to get my code to the next level.',
 
     //THIRD SECTION
       preTitle2: 'Latest Projects',
@@ -77,7 +77,7 @@ const lenguage = {
     //SECOND SECTION 
      preTitle: '¿Que tengo para ofrecer?',
      title2: 'Sobre mi',
-     text: 'Tengo experiencia en el diseño de aplicaciones web utilizando React JS, JS, HTML y CSS con múltiples proyectos. Gran aislamiento y solucion de problemas, comunicación y trabajo en equipo para alcanzar objetivos comunes. Actualmente busco implementar y mejorar mis habilidades de manera profesional para llevar mi código al siguiente nivel.',
+     text: 'Tengo experiencia en el diseño de aplicaciones web utilizando ReactJS, JS, HTML,  CSS, Node y Express con múltiples proyectos. Gran aislamiento y solucion de problemas, comunicación y trabajo en equipo para alcanzar objetivos comunes. Actualmente busco implementar y mejorar mis habilidades de manera profesional para llevar mi código al siguiente nivel.',
 
     //THIRD SECTION
      preTitle2: 'Ultimos Proyectos',
