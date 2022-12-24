@@ -61,11 +61,6 @@ body{
 .nav__link:hover{ 
  opacity: 1;
 }
-
- /*NAV ANIMATION */
-
-
- /* FINISH NAV ANIMATION */ 
  
 /* 2 --> Syle icon nav */
 .header__app{
@@ -85,6 +80,7 @@ body{
  width: 100%; 
  padding-right: 1rem;
  z-index: 50;
+ padding-top: .5rem;
 }
 .App__icons > a{
  color: #E0B6A8;
@@ -99,7 +95,7 @@ body{
  height: 15px;
  width: 20px;
  margin-right:7px;
- background-color: black;
+ background-color: transparent;
  color: #E0B6A8;
  font-size: 19PX;
  cursor: pointer;
@@ -110,7 +106,7 @@ body{
  height: 20px;
  width: 20px;
  margin-right:7px;
- background-color: black;
+ background-color: transparent;
  color: #E0B6A8;
  font-size: 19PX;
  cursor: pointer;
