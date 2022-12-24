@@ -21,13 +21,21 @@ function App() {
  const [translation, setTranslation] = useState(Lenguage.en)
  const [lenguageText, setLenguageText] = useState('Spa')
 
+//CV lenguage 
+const [lenguageCV, setLenguageCV] = useState('/src/assets/CVeng.pdf')
+
  const handleLenguage = () => {
    if(translation == Lenguage.en ){
+    //SET CONTENT LENGUAGE
     setTranslation(Lenguage.es)
+    //SET NAV LENGUAGE-OPTION
     setLenguageText('Eng')
+    //SET LENGUAGE CV
+    setLenguageCV('/src/assets/CVesp.pdf')
    }else{
      setTranslation(Lenguage.en)
      setLenguageText('Spa')
+     setLenguageCV('/src/assets/CVeng.pdf')
    }
  }
 
@@ -47,12 +55,12 @@ function App() {
 
 // PDF file 
 const downloadPDF = () => {
-  fetch('/src/assets/CV.pdf').then(response => {
+  fetch(lenguageCV).then(response => {
     response.blob().then(blob => {
        const fileURL = window.URL.createObjectURL(blob);
             let alink = document.createElement('a');
                 alink.href = fileURL;
-                alink.download = '/src/assets/CV.pdf';
+                alink.download = lenguageCV;
                 alink.click();
     })
   })
