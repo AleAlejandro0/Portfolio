@@ -55,12 +55,12 @@ const [lenguageCV, setLenguageCV] = useState('/src/assets/CVeng.pdf')
 
 // PDF file 
 const downloadPDF = () => {
-  fetch(lenguageCV).then(response => {
+  fetch('/src/assets/CVeng.pdf').then(response => {
     response.blob().then(blob => {
        const fileURL = window.URL.createObjectURL(blob);
             let alink = document.createElement('a');
                 alink.href = fileURL;
-                alink.download = lenguageCV;
+                alink.download = '/src/assets/CVeng.pdf';
                 alink.click();
     })
   })

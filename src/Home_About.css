@@ -80,7 +80,6 @@ body{
  width: 100%; 
  padding-right: 1rem;
  z-index: 50;
- padding-top: .5rem;
 }
 .App__icons > a{
  color: #E0B6A8;
@@ -410,5 +409,8 @@ body{
   }
   .contact_section{
     padding-top: 2rem;
+  }
+  .App__icons{
+    padding-top: .3rem;
   }
 }
