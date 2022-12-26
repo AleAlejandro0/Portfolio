@@ -1,5 +1,5 @@
 import React from 'react'
-import thirdAnimation from '../assets/animations/undraw_developer_activity_re_39tg.svg'
+import thirdAnimation from '../animations/undraw_developer_activity_re_39tg.svg'
 
 const Contact = ({translation, contactSection}) => {
   return (

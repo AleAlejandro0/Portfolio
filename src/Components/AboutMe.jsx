@@ -1,5 +1,5 @@
 import React from 'react'
-import secondAnimation from '../assets/animations/undraw_pair_programming_re_or4x.svg'
+import secondAnimation from '../animations/undraw_pair_programming_re_or4x.svg'
 
 const AboutMe = ({translation, aboutMeSection}) => {
   return (

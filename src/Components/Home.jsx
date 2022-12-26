@@ -1,4 +1,4 @@
-import firstAnimation from '../assets/animations/undraw_adventure_re_ncqp.svg'
+import firstAnimation from '../animations/undraw_adventure_re_ncqp.svg'
 
 const Home = ({translation, titleAnimation, aboutAnimation}) => {
   return (
