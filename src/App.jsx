@@ -54,6 +54,7 @@ const [lenguageCV, setLenguageCV] = useState('/public/CVeng.pdf')
   } 
 
 // PDF file 
+/*
 const downloadPDF = () => {
   fetch(lenguageCV).then(response => {
     response.blob().then(blob => {
@@ -66,6 +67,8 @@ const downloadPDF = () => {
   })
 }
 
+*/
+
   return (
     <div className="App">
       <header className='header__app'>
@@ -74,7 +77,10 @@ const downloadPDF = () => {
          <a href="https://www.linkedin.com/in/alejandro0/" target="_blank"><i className="fa-brands fa-linkedin"></i></a>
          <a href="https://github.com/AleAlejandro0" target="_blank"><i className="fa-brands fa-github"></i></a>
          <button  className='App_lenguage_btn' onClick={handleLenguage}>{lenguageText}</button>
-         <button className='App_icon_cv' onClick={downloadPDF}>CV</button>
+
+         <a  className='App_icon_cv' href = "/public/CVeng.pdf" download>CV</a>
+       {  /* <button className='App_icon_cv' onClick={downloadPDF}>CV</button> */ }
+  
 
          <div className='menu_btn' onClick={handleMenu}>
             <div className="menu_btn-burger"></div>

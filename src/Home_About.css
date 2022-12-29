@@ -109,6 +109,7 @@ body{
  color: #E0B6A8;
  font-size: 19PX;
  cursor: pointer;
+ text-decoration: none;
  font-family: var(--main-font);
 }
 /*Open or close menu*/
