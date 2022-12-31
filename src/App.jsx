@@ -54,7 +54,7 @@ const [lenguageCV, setLenguageCV] = useState('/public/CVeng.pdf')
   } 
 
 // PDF file 
-const downloadPDF = () => {
+/*const downloadPDF = () => {
   fetch(lenguageCV).then(response => {
     response.blob().then(blob => {
        const fileURL = window.URL.createObjectURL(blob);
@@ -64,7 +64,7 @@ const downloadPDF = () => {
                 alink.click(lenguageCV);
     })
   })
-}
+}*/
 
   return (
     <div className="App">
@@ -75,8 +75,10 @@ const downloadPDF = () => {
          <a href="https://github.com/AleAlejandro0" target="_blank"><i className="fa-brands fa-github"></i></a>
          <button  className='App_lenguage_btn' onClick={handleLenguage}>{lenguageText}</button>
 
+       
+       <a className="App_icon_cv" href={lenguageCV} download="cv.pdf">CV</a>
  
-         <button className='App_icon_cv' onClick={downloadPDF}>CV</button> 
+       { /* <button className='App_icon_cv' onClick={downloadPDF}>CV</button> */}
   
 
          <div className='menu_btn' onClick={handleMenu}>
