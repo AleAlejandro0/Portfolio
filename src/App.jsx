@@ -22,7 +22,7 @@ function App() {
  const [lenguageText, setLenguageText] = useState('Spa')
 
 //CV lenguage 
-const [lenguageCV, setLenguageCV] = useState('/public/CVeng.pdf')
+const [lenguageCV, setLenguageCV] = useState('/CVeng.pdf')
 
  const handleLenguage = () => {
    if(translation == Lenguage.en ){
@@ -31,11 +31,11 @@ const [lenguageCV, setLenguageCV] = useState('/public/CVeng.pdf')
     //SET NAV LENGUAGE-OPTION
     setLenguageText('Eng')
     //SET LENGUAGE CV
-    setLenguageCV('/public/CVesp.pdf')
+    setLenguageCV('/CVesp.pdf')
    }else{
      setTranslation(Lenguage.en)
      setLenguageText('Spa')
-     setLenguageCV('/public/CVeng.pdf')
+     setLenguageCV('/CVeng.pdf')
    }
  }
 
