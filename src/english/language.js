@@ -1,4 +1,4 @@
-const lenguage = {
+const language = {
     //INGLISH
     en: {
     //Nav-menu 
@@ -114,4 +114,4 @@ const lenguage = {
     }
 }
 
-export default lenguage
+export default language

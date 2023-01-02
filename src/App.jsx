@@ -7,8 +7,7 @@ import Portfolio from './Components/Portfolio'
 import { Skills } from './Components/Skills'
 import Contact from './Components/Contact'
 import AboutMe from './Components/AboutMe'
-//Lenguage 
-import Lenguage from './english/lenguage'
+import Language from './english/language'
 
 function App() {
 
@@ -17,31 +16,30 @@ function App() {
  const menuBTN = document.getElementsByClassName('menu_btn')
  const showMenu = document.getElementsByClassName('nav__ul')
 
-//Lenguage state 
- const [translation, setTranslation] = useState(Lenguage.en)
- const [lenguageText, setLenguageText] = useState('Spa')
+//Language state 
+ const [translation, setTranslation] = useState(Language.en)
+ const [languageText, setLanguageText] = useState('Spa')
 
-//CV lenguage 
-const [lenguageCV, setLenguageCV] = useState('/CVeng.pdf')
+//CV language 
+const [languageCV, setLanguageCV] = useState('/CVeng.pdf')
 
- const handleLenguage = () => {
-   if(translation == Lenguage.en ){
-    //SET CONTENT LENGUAGE
-    setTranslation(Lenguage.es)
-    //SET NAV LENGUAGE-OPTION
-    setLenguageText('Eng')
-    //SET LENGUAGE CV
-    setLenguageCV('/CVesp.pdf')
+ const handleLanguage = () => {
+   if(translation == Language.en ){
+    //SET CONTENT LANGUAGE
+    setTranslation(Language.es)
+    //SET NAV LANGUAGE-OPTION
+    setLanguageText('Eng')
+    //SET LANGUAGE CV
+    setLanguageCV('/CVesp.pdf')
    }else{
-     setTranslation(Lenguage.en)
-     setLenguageText('Spa')
-     setLenguageCV('/CVeng.pdf')
+     setTranslation(Language.en)
+     setLanguageText('Spa')
+     setLanguageCV('/CVeng.pdf')
    }
  }
 
 //close and open animation navbar btn 
- const handleMenu = () => {
-
+  const handleMenu = () => {
     if(!menuOpen){
       menuBTN[0].classList.add('open');
       showMenu[0].classList.add('open_menu');
@@ -53,19 +51,6 @@ const [lenguageCV, setLenguageCV] = useState('/CVeng.pdf')
     }
   } 
 
-// PDF file 
-/*const downloadPDF = () => {
-  fetch(lenguageCV).then(response => {
-    response.blob().then(blob => {
-       const fileURL = window.URL.createObjectURL(blob);
-            let alink = document.createElement('a');
-                alink.href = fileURL;
-                alink.download = lenguageCV;
-                alink.click(lenguageCV);
-    })
-  })
-}*/
-
   return (
     <div className="App">
       <header className='header__app'>
@@ -73,13 +58,9 @@ const [lenguageCV, setLenguageCV] = useState('/CVeng.pdf')
          <a className='App_icon_name' href='' >Alejandro R.</a>
          <a href="https://www.linkedin.com/in/alejandro0/" target="_blank"><i className="fa-brands fa-linkedin"></i></a>
          <a href="https://github.com/AleAlejandro0" target="_blank"><i className="fa-brands fa-github"></i></a>
-         <button  className='App_lenguage_btn' onClick={handleLenguage}>{lenguageText}</button>
+         <button  className='App_language_btn' onClick={handleLanguage}>{languageText}</button>
 
-       
-       <a className="App_icon_cv" href={lenguageCV} download="cv.pdf">CV</a>
- 
-       { /* <button className='App_icon_cv' onClick={downloadPDF}>CV</button> */}
-  
+         <a className="App_icon_cv" href={languageCV} download="cv.pdf">CV</a>
 
          <div className='menu_btn' onClick={handleMenu}>
             <div className="menu_btn-burger"></div>
