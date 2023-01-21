@@ -53,7 +53,7 @@ const language = {
      formEmail: 'E-mail:',
      formSubject: 'Subject:',
      formMessage: 'Message:',
-     formBTN: 'Send:'
+     formBTN: 'Send'
     },
 
     //SPANISH
@@ -110,7 +110,7 @@ const language = {
      formEmail: 'E-mail:',
      formSubject: 'Asunto:',
      formMessage: 'Mensaje:',
-     formBTN: 'Enviar:'
+     formBTN: 'Enviar'
     }
 }
 
