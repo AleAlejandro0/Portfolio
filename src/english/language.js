@@ -20,7 +20,7 @@ const language = {
     //SECOND SECTION 
       preTitle: 'What do I have to offer?',
       title2: 'About me',
-      text: 'I have experience designing web apps using ReactJS, JS, HTML, and CSS, Node and Express with multiple projects. Great problem isolation, troubleshooting, communication, and teamwork to reach common goals. Now looking to implement and improve my skills in a professional manner to get my code to the next level.',
+      text: 'I have experience designing web apps using ReactJS, JS, HTML, CSS, Node.JS and Express with multiple projects. Great problem isolation, troubleshooting, communication, and teamwork to reach common goals. Now looking to implement and improve my skills in a professional manner to get my code to the next level.',
 
     //THIRD SECTION
       preTitle2: 'Latest Projects',
